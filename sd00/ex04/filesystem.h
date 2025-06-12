@@ -6,7 +6,7 @@
 /*   By: cacorrea <cacorrea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 10:43:10 by cacorrea          #+#    #+#             */
-/*   Updated: 2025/06/11 12:25:47 by cacorrea         ###   ########.fr       */
+/*   Updated: 2025/06/12 15:06:57 by cacorrea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct FSNode
 	const char			*name;
 	int					size;
 	struct FSNode		*parent;
-	struct FSNode		*child;
+	struct FSNode		*child;//only the first child + head of the next_child list
 	struct FSNode		*next_child;
 }			FSNode;
 

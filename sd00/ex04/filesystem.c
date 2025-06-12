@@ -6,7 +6,7 @@
 /*   By: cacorrea <cacorrea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 10:42:58 by cacorrea          #+#    #+#             */
-/*   Updated: 2025/06/11 12:27:17 by cacorrea         ###   ########.fr       */
+/*   Updated: 2025/06/12 15:08:49 by cacorrea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,15 +52,21 @@ void	add_child(FSNode *parent, FSNode *child)
 
 	if (!parent || !child)
 		return ;
+	child->parent = parent;
 	if (parent->size == 0)
 	{
 		if (parent->child == NULL)
+		{
 			parent->child = child;
-		child->parent = parent;
-		last_sibling = child->next_child;
-		while (last_sibling->next_child != NULL)
-			last_sibling = last_sibling->next_child;
-		last_sibling->next_child = child;
+			parent->next_child = child;
+		}
+		else
+		{
+			last_sibling = parent->next_child;
+			while (last_sibling->next_child != NULL)
+				last_sibling = last_sibling->next_child;
+			last_sibling->next_child = child;
+		}
 	}
 }
 
@@ -70,7 +76,7 @@ FSNode	*get_children(const FSNode *parent)
 
 	children = NULL;
 	if (parent)
-		children = parent->next_child;
+		children = parent->child;//head of next_children list
 	return (children);
 }
 

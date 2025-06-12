@@ -6,7 +6,7 @@
 /*   By: cacorrea <cacorrea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 10:42:12 by cacorrea          #+#    #+#             */
-/*   Updated: 2025/06/11 13:00:26 by cacorrea         ###   ########.fr       */
+/*   Updated: 2025/06/12 11:13:43 by cacorrea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	is_sequence_of_3(const int *arr, int size)
 	j = 0;
 	while (i < size - 1)
 	{
-		if (arr[i + 1] != arr[i] + 1)
+		if (arr[i + 1] <= arr[i])
 			j = 0;
 		else
 			j++;
@@ -62,7 +62,7 @@ int	count_segments(const int *arr, int size)
 
 /* int	main(void)
 {
-	const int	arr[8] = {4, 0, 1, 2, 7, 78, 9, 11};
+	const int	arr[8] = {4, 22, 1, 0, 0, 7, 9, 11};
 	int		result;
 
 	result = is_sequence_of_3(arr, 8);

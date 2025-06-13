@@ -6,7 +6,7 @@
 /*   By: cacorrea <cacorrea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 10:29:53 by cacorrea          #+#    #+#             */
-/*   Updated: 2025/06/11 12:54:49 by cacorrea         ###   ########.fr       */
+/*   Updated: 2025/06/12 15:12:20 by cacorrea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ float	average(const int *arr, int size)
 	return (average);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	const int	arr[7] = {4, 9, 190, -5, 10, 7, 88};
 	float		result;
@@ -45,4 +45,4 @@ int	main(void)
 	result = average(arr, 7);
 	printf ("the average is: %f\n", result);
 	return (0);
-}
+} */

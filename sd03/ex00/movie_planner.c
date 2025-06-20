@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first_last.h                                       :+:      :+:    :+:   */
+/*   movie_planner.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cacorrea <cacorrea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 10:43:45 by cacorrea          #+#    #+#             */
-/*   Updated: 2025/06/20 10:55:05 by cacorrea         ###   ########.fr       */
+/*   Created: 2025/06/13 09:07:14 by cacorrea          #+#    #+#             */
+/*   Updated: 2025/06/18 17:29:53 by cacorrea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIRST_LAST_H
-# define FIRST_LAST_H
+#include "movie_planner.h"
 
-//# include <stdio.h>
-
-void	first_last(int arr[], int size, int target, int *first, int *last);
-
-#endif
+struct Plan *create_movie_night_plan(void)
+{
+	struct Preferences	*prefers = NULL;
+	struct MovieList	*lst = NULL;
+	struct Plan			*plan = NULL;
+	
+	prefers = get_user_preferences();
+	if (!prefers)
+		return (NULL);
+	lst = find_movies(prefers);
+	if (!lst)
+	{
+		free(prefers);
+		return (NULL);
+	}
+	plan = build_plan(lst);
+	free(prefers);
+	free(lst);
+	return (plan);
+}

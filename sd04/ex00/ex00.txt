@@ -1,0 +1,45 @@
+1. open the file ---> error: write a message
+
+2. load the file into a matrix: the matrix contains cleaned input in uppercase
+
+3. print a message for user: press ^X for exit the program
+
+4. print a message for user: choose camp:	1 search by title 
+						2 search by author
+
+5. print a message for user: what are you looking for? ---> if only spaces or enter, print 
+									a message again
+
+6. transform in uppercase the string received
+
+7. search for the substing in the column's strings of the matrix 
+			---> not found: print a message
+			---> found: print all the matching results
+
+8. if received exit ---> free and clean resources and exit the program
+
+
+
+
+2. create the matrix:
+count the number of lines
+malloc the struct of size 100 x 3 if nb of lines >= 100
+		or nb of lines x 3 if nb of lines < 100
+char *matrix[n of lines (max 100)][3]
+read one line at the time:
+	split it by commas ,
+	if there are not 3 strings (id number, title, author) discard the line
+	trim spaces and tabs
+	transform in uppercase
+
+
+
+possible improvement:
+-create 2 matrixes: 
+first ordered by title
+second ordered by author 
+for search use the one is required by the user's camp
+-if file is longer than 100 lines:
+make run the program 100 lines at a time, when finish, save the user input an load
+the next 100 lines ... 
+

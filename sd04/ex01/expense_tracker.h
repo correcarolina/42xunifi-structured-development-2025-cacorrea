@@ -1,20 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first_last.h                                       :+:      :+:    :+:   */
+/*   expense_tracker.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cacorrea <cacorrea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cacorrea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 10:43:45 by cacorrea          #+#    #+#             */
-/*   Updated: 2025/06/20 10:55:05 by cacorrea         ###   ########.fr       */
+/*   Created: 2025/06/20 10:41:21 by cacorrea          #+#    #+#             */
+/*   Updated: 2025/06/20 11:01:28 by cacorrea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIRST_LAST_H
-# define FIRST_LAST_H
-
-//# include <stdio.h>
-
-void	first_last(int arr[], int size, int target, int *first, int *last);
+#ifndef EXPENSE_TRACKER_H
+# define EXPENSE_TRACKER_H
+# include <stdlib.h>
 
 #endif

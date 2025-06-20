@@ -1,0 +1,13 @@
+parse the input
+
+capitalize all strings, except email
+
+define maxID
+
+put the input into an ordered by id list 
+
+hand error messages
+
+
+
+
